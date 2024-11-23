@@ -1,0 +1,192 @@
+/* Import Font */
+@font-face {
+    font-family: 'UrbanStarblues';
+    src: url('yonk.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Default font untuk body */
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+footer {
+    background-color: #d0dae4;
+}
+
+.jumbotron {
+    background-color: #1a1a2e; /* Warna dasar jumbotron */
+    background-image: url('czonk.png'); /* Path ke gambar */
+    background-size: 80%; /* Gambar lebih kecil, 80% dari ukuran elemen */
+    background-position: center; /* Gambar dipusatkan */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    color: #fff; /* Warna teks agar terlihat jelas */
+    padding: 100px 20px; /* Ruang dalam elemen */
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 26, 46, 0.8); /* Overlay warna dengan transparansi */
+    z-index: -1; /* Overlay berada di bawah konten */
+}
+
+/* Responsif: Penyesuaian gambar untuk layar kecil */
+@media (max-width: 768px) {
+    .jumbotron {
+        background-size: 60%; /* Perkecil gambar untuk layar kecil */
+        background-position: top; /* Geser gambar ke atas */
+    }
+}
+
+/* Responsif: Penyesuaian gambar untuk layar besar */
+@media (min-width: 769px) {
+    .jumbotron {
+        background-size: 80%; /* Ukuran gambar lebih besar untuk layar besar */
+        background-position: center; /* Tetap di tengah */
+    }
+}
+
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff, 0 0 30px #1e90ff; /* Efek cahaya biru */
+}
+
+.jumbotron h2 {
+    font-family: 'UrbanStarblues', sans-serif; /* Tetap gunakan font UrbanStarblues */
+    font-size: 5rem;
+    color: #f39c12;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+}
+
+.jumbotron a.btn {
+    margin-top: 20px;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #f39c12;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+/* About Section */
+.about-section {
+    background-color: #ffff; /* Warna latar belakang */
+    color: #1a1a2e; /* Warna teks */
+    padding: 50px 20px; /* Jarak dalam */
+    text-align: center; /* Pusatkan teks */
+}
+
+/* About Section Content */
+.about-content {
+    background-color: #1a1a2e; /* Warna latar belakang */
+    color: #fff; /* Warna teks default */
+    padding: 20px;
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan bayangan */
+}
+
+.about-content h2 {
+    font-family: 'UrbanStarblues', sans-serif; /* Terapkan font UrbanStarblues */
+    font-size: 2rem; /* Ukuran font */
+    color: #f39c12; /* Warna teks */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Bayangan untuk teks */
+    margin-bottom: 20px; /* Jarak dengan teks berikutnya */
+}
+
+
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Latar belakang abu-abu terang */
+}
+
+#skills h2 {
+    font-family: 'UrbanStarblues', sans-serif; /* Gunakan font custom */
+    font-size: 2.5rem;
+    color: #f39c12; /* Warna teks utama */
+}
+
+#skills .row .col-md-2 {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills .row .col-md-2:hover {
+    transform: translateY(-10px); /* Efek hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan */
+}
+
+#skills i {
+    transition: color 0.3s;
+}
+
+#skills i:hover {
+    color: #f39c12; /* Warna saat ikon di-hover */
+}
+
+#skills h5 {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+
+/* Hover effect on cards */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+/* Project Section */
+#projects h2 {
+    font-family: 'UrbanStarblues', sans-serif; /* Terapkan font UrbanStarblues */
+    font-size: 2.5rem; /* Ukuran font */
+    color: #f39c12; /* Warna teks */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Bayangan untuk teks */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+
+/* Contact Section */
+#contact h2 {
+    font-family: 'UrbanStarblues', sans-serif; /* Terapkan font UrbanStarblues */
+    font-size: 2.5rem; /* Ukuran font */
+    color: #f39c12; /* Warna teks */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Bayangan untuk teks */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+
+footer {
+    background-color: #1a1a2e; /* Warna latar belakang footer */
+}
+
+
